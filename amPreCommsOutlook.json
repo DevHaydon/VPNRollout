@@ -33,7 +33,7 @@
                     "horizontalAlignment": "Center",
                     "separator": true,
                     "spacing": "Medium",
-                    "text": "@{variables('varTemplate')?['acTitle']}"
+                    "text": "@variables('varTemplate')?['acTitle']}"
                 },
                 {
                     "type": "ColumnSet",
@@ -44,7 +44,7 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "@{variables('varTemplate')?['acSubtitle']}",
+                                    "text": "@variables('varTemplate')?['acSubtitle']}",
                                     "wrap": true,
                                     "isSubtle": true,
                                     "spacing": "Large",
@@ -60,7 +60,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "url": "@{variables('varTemplate')?['acImgLink']}",
+                                    "url": "@variables('varTemplate')?['acImgLink']}",
                                     "separator": true,
                                     "spacing": "Medium"
                                 }
