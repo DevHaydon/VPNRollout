@@ -1,0 +1,279 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "id": "acPreCommsTeams",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Image",
+                    "url": "https://github.com/DevHaydon/GC-Logos/blob/main/ITServiceDesk.png?raw=true",
+                    "altText": "Ground Control IT Logo",
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "0px",
+            "padding": "Large",
+            "style": "emphasis",
+            "horizontalAlignment": "Center",
+            "spacing": "None"
+        },
+        {
+            "type": "Container",
+            "id": "acContTitle",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "ExtraLarge",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "id": "acTxtTitle",
+                    "horizontalAlignment": "Center",
+                    "separator": true,
+                    "spacing": "Medium",
+                    "text": "@{variables('varTemplate')?['acTitle']}"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 60,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "@{variables('varTemplate')?['acSubtitle']}",
+                                    "wrap": true,
+                                    "isSubtle": true,
+                                    "spacing": "Large",
+                                    "horizontalAlignment": "Center",
+                                    "size": "Large"
+                                }
+                            ],
+                            "padding": "Small"
+                        },
+                        {
+                            "type": "Column",
+                            "width": 40,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "@{variables('varTemplate')?['acImgLink']}",
+                                    "separator": true,
+                                    "spacing": "Medium"
+                                }
+                            ],
+                            "padding": "Small"
+                        }
+                    ],
+                    "style": "default",
+                    "padding": "None"
+                }
+            ],
+            "style": "default",
+            "padding": "None"
+        },
+        {
+            "type": "Container",
+            "padding": "Small",
+            "id": "acBodyText",
+            "horizontalAlignment": "Center",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acMain']}",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acHeader1']}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "Container",
+                    "id": "amContConnect",
+                    "padding": "None",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "@{variables('varTemplate')?['acText1']}",
+                            "size": "Medium",
+                            "isSubtle": true,
+                            "horizontalAlignment": "Center",
+                            "wrap": true,
+                            "spacing": "None",
+                            "id": "amTextConnectivity",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "isVisible": false
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acHeader2']}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "horizontalAlignment": "Center",
+                    "id": "amTextSecurity"
+                },
+                {
+                    "type": "Container",
+                    "id": "amContSecurity",
+                    "padding": "None",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "@{variables('varTemplate')?['acText2']}",
+                            "size": "Medium",
+                            "isSubtle": true,
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "spacing": "None",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "isVisible": false
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acHeader3']}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "id": "amTextPerformance"
+                },
+                {
+                    "type": "Container",
+                    "id": "amContPerform",
+                    "padding": "None",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "@{variables('varTemplate')?['acText3']}",
+                            "size": "Medium",
+                            "isSubtle": true,
+                            "horizontalAlignment": "Center",
+                            "wrap": true,
+                            "spacing": "None",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "isVisible": false
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acHeader4']}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "horizontalAlignment": "Center",
+                    "id": "amTextRemote"
+                },
+                {
+                    "type": "Container",
+                    "id": "amContRemote",
+                    "padding": "None",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "@{variables('varTemplate')?['acText4']}",
+                            "size": "Medium",
+                            "isSubtle": true,
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "id": "ac",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "isVisible": false
+                }
+            ],
+            "verticalContentAlignment": "Center"
+        },
+        {
+            "type": "Container",
+            "id": "amConToggle",
+            "padding": "None",
+            "items": [
+                {
+                    "type": "ActionSet",
+                    "id": "amToggle",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "id": "amToggleButton",
+                            "title": "More Info",
+                            "targetElements": [
+                                "amContPerform",
+                                "amContRemote",
+                                "amContSecurity",
+                                "amContConnect"
+                            ],
+                            "style": "positive",
+                            "isPrimary": true
+                        }
+                    ],
+                    "horizontalAlignment": "Center",
+                    "separator": true
+                }
+            ],
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "Container",
+            "id": "acContCTA",
+            "padding": "None",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "id": "acTextCTA",
+                    "text": "@{variables('varTemplate')?['acTextCTA']}",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "isSubtle": true,
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "color": "Good"
+                },
+                {
+                    "type": "TextBlock",
+                    "id": "acTextCTABody",
+                    "text": "@{variables('varTemplate')?['acTextBodyCTA']}",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "color": "Good",
+                    "size": "Medium",
+                    "isSubtle": true
+                }
+            ],
+            "style": "emphasis",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "id": "acFooter",
+            "padding": "None",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "id": "acTextFooter",
+                    "text": "IT Service Desk Notification",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "isSubtle": true,
+                    "size": "Medium",
+                    "weight": "Bolder"
+                }
+            ],
+            "style": "emphasis",
+            "separator": true
+        }
+    ],
+    "padding": "None"
+}
