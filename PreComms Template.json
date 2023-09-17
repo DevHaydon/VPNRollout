@@ -1,16 +1,16 @@
 {
 
-"acTitle": "The New VPN is being Rolled Out",
-"acSubtitle": "Hi Aaron, We are thrilled to announce a significant upgrade that will revolutionise the way we work in our ever-evolving hybrid environment. Say hello to our brand-new VPN (Virtual Private Network)!",
-"acMain": "Key Benefits of Our New Palo Alto VPN:",
-"acHeader1": "Seamless Connectivity: ",
-"actext1": "Our new VPN ensures that you can securely access company resources, applications, and data with ease, no matter where you are. It provides a secure bridge between your device and our corporate network, eliminating any location-based barriers.",
-"acHeader2": "Enhanced Security: ",
-"actext2": "Protecting your data is our top priority. Our VPN employs state-of-the-art encryption and security protocols to safeguard your information and ensure your online activities remain private.",
-"acHeader3": "Optimized Performance ",
-"actext3": "Experience lightning-fast speeds and reliable connections, so you can work efficiently and effectively, without frustrating lags or interruptions.",
-"acHeader4": "No Remote Desktop: ",
-"actext4": "Access everything you need without the need for Remote Desktop, need ICe2? Or a Shared Drive? Just open it from your desktop... It's as easier as that!",
-"acImgLink": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true",
-
-}
+    "acTitle": "The New VPN is being Rolled Out",
+    "acSubtitle": "Hi @{triggeroutputs()?['Email']}, We are thrilled to announce a significant upgrade that will revolutionise the way we work in our ever-evolving hybrid environment. Say hello to our brand-new VPN (Virtual Private Network)!",
+    "acMain": "Key Benefits of Our New Palo Alto VPN:",
+    "acHeader1": "Seamless Connectivity: ",
+    "actext1": "Our new VPN ensures that you can securely access company resources, applications, and data with ease, no matter where you are. It provides a secure bridge between your device and our corporate network, eliminating any location-based barriers.",
+    "acHeader2": "Enhanced Security: ",
+    "actext2": "Protecting your data is our top priority. Our VPN employs state-of-the-art encryption and security protocols to safeguard your information and ensure your online activities remain private.",
+    "acHeader3": "Optimized Performance ",
+    "actext3": "Experience lightning-fast speeds and reliable connections, so you can work efficiently and effectively, without frustrating lags or interruptions.",
+    "acHeader4": "No Remote Desktop: ",
+    "actext4": "Access everything you need without the need for Remote Desktop, need ICe2? Or a Shared Drive? Just open it from your desktop... It's as easier as that!",
+    "acImgLink": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true"
+    
+    }
