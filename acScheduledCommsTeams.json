@@ -95,86 +95,7 @@
                     "weight": "Bolder",
                     "horizontalAlignment": "Center",
                     "id": "amTextRemote"
-                }
-            ],
-            "verticalContentAlignment": "Center"
-        },
-        {
-            "type": "Container",
-            "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
-            "padding": "None",
-            "items": [
-                {
-                    "type": "ColumnSet",
-                    "columns": [
-                        {
-                            "type": "Column",
-                            "width": 80,
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "${$root.acText1}",
-                                    "size": "Medium",
-                                    "isSubtle": true,
-                                    "horizontalAlignment": "Center",
-                                    "wrap": true,
-                                    "spacing": "None",
-                                    "id": "amTextConnectivity",
-                                    "weight": "Lighter"
-                                },
-                                {
-                                    "type": "TextBlock",
-                                    "text": "${$root.acText2}",
-                                    "size": "Medium",
-                                    "isSubtle": true,
-                                    "wrap": true,
-                                    "horizontalAlignment": "Center",
-                                    "spacing": "None",
-                                    "weight": "Lighter"
-                                }
-                            ],
-                            "selectAction": {
-                                "type": "Action.OpenUrl",
-                                "url": "https://www.google.com",
-                                "title": "How To?"
-                            },
-                            "padding": "None"
-                        },
-                        {
-                            "type": "Column",
-                            "width": 20,
-                            "items": [
-                                {
-                                    "type": "ActionSet",
-                                    "actions": [
-                                        {
-                                            "type": "Action.OpenUrl",
-                                            "title": "How to Update"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "ActionSet",
-                                    "actions": [
-                                        {
-                                            "type": "Action.OpenUrl",
-                                            "title": "Action.OpenUrl"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "padding": "None"
-                        }
-                    ],
-                    "padding": "None"
-                }
-            ]
-        },
-        {
-            "type": "Container",
-            "id": "amContSecurity",
-            "padding": "None",
-            "items": [
+                },
                 {
                     "type": "TextBlock",
                     "text": "${$root.acHeader2}",
@@ -182,21 +103,24 @@
                     "weight": "Bolder",
                     "horizontalAlignment": "Center",
                     "id": "amTextSecurity"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acText3}",
-                    "size": "Medium",
-                    "isSubtle": true,
-                    "horizontalAlignment": "Center",
-                    "wrap": true,
-                    "spacing": "None",
-                    "weight": "Lighter"
                 }
-            ]
+            ],
+            "verticalContentAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "${$root.acText3}",
+            "size": "Medium",
+            "isSubtle": true,
+            "horizontalAlignment": "Center",
+            "wrap": true,
+            "spacing": "None",
+            "weight": "Lighter"
         },
         {
             "type": "Container",
+            "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
+            "padding": "None",
             "items": [
                 {
                     "type": "TextBlock",
@@ -216,9 +140,68 @@
                     "wrap": true,
                     "spacing": "None",
                     "weight": "Lighter"
+                },
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${$root.acHeader3}",
+                            "size": "Medium",
+                            "weight": "Bolder",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "id": "8265efaf-6d12-cf22-18aa-90875228a3cf"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": 80,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${$root.acText1}",
+                                            "size": "Medium",
+                                            "isSubtle": true,
+                                            "horizontalAlignment": "Center",
+                                            "wrap": true,
+                                            "spacing": "None",
+                                            "id": "amTextConnectivity",
+                                            "weight": "Lighter"
+                                        }
+                                    ],
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "https://www.google.com",
+                                        "title": "How To?"
+                                    },
+                                    "padding": "None"
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": 20,
+                                    "items": [
+                                        {
+                                            "type": "ActionSet",
+                                            "actions": [
+                                                {
+                                                    "type": "Action.OpenUrl",
+                                                    "title": "How to Update"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "padding": "None"
+                                }
+                            ],
+                            "padding": "None"
+                        }
+                    ],
+                    "padding": "None"
                 }
-            ],
-            "padding": "None"
+            ]
         },
         {
             "type": "Container",
@@ -269,5 +252,6 @@
             "style": "emphasis",
             "separator": true
         }
-    ]
+    ],
+    "padding": "None"
 }
