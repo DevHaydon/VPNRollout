@@ -1,0 +1,19 @@
+{
+    "acTitle": "Your VPN Installation Date is ##/##/##",
+    "acSubtitle": "Hi Name, We recently emailed you to let you knwo we are rolling out the new VPN, this is to let you know we plan on installing it on ##/##/##",
+    "acMain": "Here's everything you need to know about the Install",
+    "acHeader1": "We will be installing the VPN remotely to your device, so there's not much for you to do",
+    "actext1": " ",
+    "acHeader2": " ",
+    "actext2": "The Installation will happen first thing on the installation date, and you will recieve a Notification after the install is completed asking you to restart. Once your device has restarted you will ready to use the VPN.",
+    "acHeader3": "All we need from you before your installation : ",
+    "actext3": "Check that any file that you use on the Remote are saved on your deivce.",
+    "acHeader4": "",
+    "actext4": "Check that your Diary that and check you don't have any Important Teams Calls/Meetings first thing.",
+    "actext5": "Ensure that your device has had all the most recent Microsoft Updates. Generally the Laptop will update automatically, but ensure it has restarted before Installation date.",
+    "acImgLink": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true",
+    "acTextCTA": "If this date is not convienvent or you are on Annual Leave, please let us know.",
+    "acUpdateLink": "https://groundcontrol.atlassian.net/l/cp/TTWPPAFi",
+    "acUpdateText": "How to Update",
+    "acJiraLogo": "https://github.com/DevHaydon/GC-Logos/blob/main/Jira.jpeg?raw=true"
+    }

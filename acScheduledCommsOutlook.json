@@ -1,8 +1,9 @@
 {
     "type": "AdaptiveCard",
-    "version": "1.4",
+    "version": "1.0",
+    "originator": "24b1d63e-e7ba-4fd9-aaa2-8068c6c11141",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "id": "acScheduledCommsTeams",
+    "id": "acScheduledCommsOutlook",
     "body": [
         {
             "type": "Container",
@@ -15,9 +16,11 @@
                 }
             ],
             "minHeight": "0px",
-            "spacing": "Large",
+            "padding": "Large",
             "style": "emphasis",
-            "horizontalAlignment": "Center"        },
+            "horizontalAlignment": "Center",
+            "spacing": "None"
+        },
         {
             "type": "Container",
             "id": "acContTitle",
@@ -50,7 +53,7 @@
                                     "size": "Large"
                                 }
                             ],
-                            "spacing": "Small"
+                            "padding": "Small"
                         },
                         {
                             "type": "Column",
@@ -63,19 +66,19 @@
                                     "spacing": "Medium"
                                 }
                             ],
-                            "spacing": "Small"
+                            "padding": "Small"
                         }
                     ],
                     "style": "default",
-                    "spacing": "None"
+                    "padding": "None"
                 }
             ],
             "style": "default",
-            "spacing": "None"
+            "padding": "None"
         },
         {
             "type": "Container",
-            "spacing": "Small",
+            "padding": "Small",
             "id": "acBodyText",
             "horizontalAlignment": "Center",
             "items": [
@@ -84,8 +87,7 @@
                     "text": "${$root.acMain}",
                     "size": "Large",
                     "weight": "Bolder",
-                    "horizontalAlignment": "Center",
-                    "wrap": true
+                    "horizontalAlignment": "Center"
                 },
                 {
                     "type": "TextBlock",
@@ -93,8 +95,7 @@
                     "size": "Medium",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center",
-                    "id": "amTextRemote",
-                    "wrap": true
+                    "id": "amTextRemote"
                 },
                 {
                     "type": "TextBlock",
@@ -121,7 +122,7 @@
         {
             "type": "Container",
             "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
-            "spacing": "None",
+            "padding": "None",
             "items": [
                 {
                     "type": "TextBlock",
@@ -149,44 +150,58 @@
                     "horizontalAlignment": "Center",
                     "wrap": true,
                     "weight": "Lighter"
+                },
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": 80,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${$root.acText5}",
+                                            "size": "Medium",
+                                            "isSubtle": true,
+                                            "horizontalAlignment": "Center",
+                                            "wrap": true,
+                                            "spacing": "None",
+                                            "id": "amTextConnectivity",
+                                            "weight": "Lighter"
+                                        }
+                                    ],
+                                    "padding": "None"
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": 20,
+                                    "items": [
+                                        {
+                                            "type": "ActionSet",
+                                            "actions": [
+                                                {
+                                                    "type": "Action.OpenUrl",
+                                                    "title": "${$root.acUpdateText}",
+                                                    "url": "${$root.acUpdateLink}"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "separator": true
         },
         {
             "type": "Container",
-            "id": "b18a6f02-4b1a-f0d3-580f-df0d28a044e2",
-            "spacing": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acText5}",
-                    "size": "Medium",
-                    "isSubtle": true,
-                    "horizontalAlignment": "Center",
-                    "wrap": true,
-                    "spacing": "None",
-                    "id": "amTextConnectivity",
-                    "weight": "Lighter"
-                },
-                {
-                    "type": "ActionSet",
-                    "actions": [
-                        {
-                            "type": "Action.OpenUrl",
-                            "title": "${$root.acUpdateText}",
-                            "url": "${$root.acUpdateLink}",
-                            "tooltip": "${$root.acUpdateText}"
-                        }
-                    ],
-                    "horizontalAlignment": "Center"
-                }
-            ]
-        },
-        {
-            "type": "Container",
             "id": "acContCTA",
-            "spacing": "None",
+            "padding": "None",
             "items": [
                 {
                     "type": "TextBlock",
@@ -208,8 +223,7 @@
                             "title": "Comment on Jira Ticket",
                             "url": "${$root.acCTALink}",
                             "style": "positive",
-                            "isPrimary": true,
-                            "iconUrl": "${$root.acJiraLogo}"
+                            "isPrimary": true
                         }
                     ],
                     "horizontalAlignment": "Center"
@@ -221,7 +235,7 @@
         {
             "type": "Container",
             "id": "acFooter",
-            "spacing": "None",
+            "padding": "None",
             "items": [
                 {
                     "type": "TextBlock",
@@ -238,5 +252,5 @@
             "separator": true
         }
     ],
-    "spacing": "Default"
+    "padding": "Default"
 }
