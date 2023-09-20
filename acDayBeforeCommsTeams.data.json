@@ -1,0 +1,16 @@
+{
+
+    "acTitle": "Your VPN Installation Date is ##/##/##",
+    "acSubtitle": "Hi Name, We recently emailed you to let you knwo we are rolling out the new VPN, this is to let you know we plan on installing it on ##/##/##",
+    "acMain": "Everything you need to know about the Install",
+    "acHeader1": "We will be installing the VPN remotely to your device, so there's not much for you to do",
+    "actext1": "Ensure that your device has had all the most recent Microsoft Updates. ",
+    "acHeader2": "All we need from you: ",
+    "actext2": "Protecting your data is our top priority. Our VPN employs state-of-the-art encryption and security protocols to safeguard your information and ensure your online activities remain private.",
+    "acHeader3": "Ensure your device has all the most recent updates from Microsoft, double check that your laptop also has installed all these updates by restarting before the installation ",
+    "actext3": "Check that any file that you use on the Remote are saved on your deivce.",
+    "acHeader4": "No Remote Desktop: ",
+    "actext4": "Access everything you need without the need for Remote Desktop, need ICe2? Or a Shared Drive? Just open it from your desktop... It's as easier as that!",
+    "acImgLink": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true"
+    
+    }

@@ -33,7 +33,7 @@
                     "horizontalAlignment": "Center",
                     "separator": true,
                     "spacing": "Medium",
-                    "text": "@{variables('varTemplate')?['acTitle']}"
+                    "text": "${$root.acTitle}"
                 },
                 {
                     "type": "ColumnSet",
@@ -44,7 +44,7 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "@{variables('varTemplate')?['acSubtitle']}",
+                                    "text": "${$root.acSubtitle}",
                                     "wrap": true,
                                     "isSubtle": true,
                                     "spacing": "Large",
@@ -60,7 +60,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "url": "@variables('varTemplate')?['acImgLink']",
+                                    "url": "@variables('varTemplate')?['acImgLink",
                                     "separator": true,
                                     "spacing": "Medium"
                                 }
@@ -83,66 +83,124 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "@{variables('varTemplate')?['acMain']}",
+                    "text": "${$root.acMain}",
                     "size": "Large",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center"
                 },
                 {
                     "type": "TextBlock",
-                    "text": "@{variables('varTemplate')?['acHeader1']}",
+                    "text": "${$root.acHeader1}",
                     "size": "Medium",
                     "weight": "Bolder",
-                    "horizontalAlignment": "Center"
-                },
+                    "horizontalAlignment": "Center",
+                    "id": "amTextRemote"
+                }
+            ],
+            "verticalContentAlignment": "Center"
+        },
+        {
+            "type": "Container",
+            "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
+            "padding": "None",
+            "items": [
                 {
-                    "type": "Container",
-                    "id": "amContConnect",
-                    "padding": "None",
-                    "items": [
+                    "type": "ColumnSet",
+                    "columns": [
                         {
-                            "type": "TextBlock",
-                            "text": "@{variables('varTemplate')?['acText1']}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "horizontalAlignment": "Center",
-                            "wrap": true,
-                            "spacing": "None",
-                            "id": "amTextConnectivity",
-                            "weight": "Lighter"
+                            "type": "Column",
+                            "width": 80,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${$root.acText1}",
+                                    "size": "Medium",
+                                    "isSubtle": true,
+                                    "horizontalAlignment": "Center",
+                                    "wrap": true,
+                                    "spacing": "None",
+                                    "id": "amTextConnectivity",
+                                    "weight": "Lighter"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${$root.acText2}",
+                                    "size": "Medium",
+                                    "isSubtle": true,
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center",
+                                    "spacing": "None",
+                                    "weight": "Lighter"
+                                }
+                            ],
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "https://www.google.com",
+                                "title": "How To?"
+                            },
+                            "padding": "None"
+                        },
+                        {
+                            "type": "Column",
+                            "width": 20,
+                            "items": [
+                                {
+                                    "type": "ActionSet",
+                                    "actions": [
+                                        {
+                                            "type": "Action.OpenUrl",
+                                            "title": "How to Update"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ActionSet",
+                                    "actions": [
+                                        {
+                                            "type": "Action.OpenUrl",
+                                            "title": "Action.OpenUrl"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "padding": "None"
                         }
                     ],
-                    "isVisible": false
-                },
+                    "padding": "None"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "amContSecurity",
+            "padding": "None",
+            "items": [
                 {
                     "type": "TextBlock",
-                    "text": "@{variables('varTemplate')?['acHeader2']}",
+                    "text": "${$root.acHeader2}",
                     "size": "Medium",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center",
                     "id": "amTextSecurity"
                 },
                 {
-                    "type": "Container",
-                    "id": "amContSecurity",
-                    "padding": "None",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "@{variables('varTemplate')?['acText2']}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "wrap": true,
-                            "horizontalAlignment": "Center",
-                            "spacing": "None",
-                            "weight": "Lighter"
-                        }
-                    ],
-                    "isVisible": false
-                },
+                    "type": "TextBlock",
+                    "text": "${$root.acText3}",
+                    "size": "Medium",
+                    "isSubtle": true,
+                    "horizontalAlignment": "Center",
+                    "wrap": true,
+                    "spacing": "None",
+                    "weight": "Lighter"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
                 {
                     "type": "TextBlock",
-                    "text": "@{variables('varTemplate')?['acHeader3']}",
+                    "text": "${$root.acHeader3}",
                     "size": "Medium",
                     "weight": "Bolder",
                     "wrap": true,
@@ -150,80 +208,17 @@
                     "id": "amTextPerformance"
                 },
                 {
-                    "type": "Container",
-                    "id": "amContPerform",
-                    "padding": "None",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "@{variables('varTemplate')?['acText3']}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "horizontalAlignment": "Center",
-                            "wrap": true,
-                            "spacing": "None",
-                            "weight": "Lighter"
-                        }
-                    ],
-                    "isVisible": false
-                },
-                {
                     "type": "TextBlock",
-                    "text": "@{variables('varTemplate')?['acHeader4']}",
+                    "text": "${$root.acText3}",
                     "size": "Medium",
-                    "weight": "Bolder",
+                    "isSubtle": true,
                     "horizontalAlignment": "Center",
-                    "id": "amTextRemote"
-                },
-                {
-                    "type": "Container",
-                    "id": "amContRemote",
-                    "padding": "None",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "@{variables('varTemplate')?['acText4']}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "wrap": true,
-                            "horizontalAlignment": "Center",
-                            "id": "ac",
-                            "weight": "Lighter"
-                        }
-                    ],
-                    "isVisible": false
+                    "wrap": true,
+                    "spacing": "None",
+                    "weight": "Lighter"
                 }
             ],
-            "verticalContentAlignment": "Center"
-        },
-        {
-            "type": "Container",
-            "id": "amConToggle",
-            "padding": "None",
-            "items": [
-                {
-                    "type": "ActionSet",
-                    "id": "amToggle",
-                    "actions": [
-                        {
-                            "type": "Action.ToggleVisibility",
-                            "id": "amToggleButton",
-                            "title": "More Info",
-                            "targetElements": [
-                                "amContPerform",
-                                "amContRemote",
-                                "amContSecurity",
-                                "amContConnect"
-                            ],
-                            "style": "positive",
-                            "isPrimary": true
-                        }
-                    ],
-                    "horizontalAlignment": "Center",
-                    "separator": true
-                }
-            ],
-            "horizontalAlignment": "Center"
+            "padding": "None"
         },
         {
             "type": "Container",
@@ -233,7 +228,7 @@
                 {
                     "type": "TextBlock",
                     "id": "acTextCTA",
-                    "text": "@{variables('varTemplate')?['acTextCTA']}",
+                    "text": "${$root.acTextCTA}",
                     "wrap": true,
                     "horizontalAlignment": "Center",
                     "isSubtle": true,
@@ -244,7 +239,7 @@
                 {
                     "type": "TextBlock",
                     "id": "acTextCTABody",
-                    "text": "@{variables('varTemplate')?['acTextBodyCTA']}",
+                    "text": "${$root.acTextBodyCTA}",
                     "wrap": true,
                     "horizontalAlignment": "Center",
                     "color": "Good",
@@ -274,6 +269,5 @@
             "style": "emphasis",
             "separator": true
         }
-    ],
-    "padding": "None"
+    ]
 }
