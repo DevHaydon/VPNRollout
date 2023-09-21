@@ -6,6 +6,7 @@
     "body": [
         {
             "type": "Container",
+            "id": "acContHeader",
             "items": [
                 {
                     "type": "Image",
@@ -44,15 +45,17 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "${$root.acSubtitle}",
+                                    "text": "${$root.acSubtitle",
                                     "wrap": true,
                                     "isSubtle": true,
                                     "spacing": "Large",
                                     "horizontalAlignment": "Center",
-                                    "size": "Large"
+                                    "size": "Large",
+                                    "weight": "Bolder"
                                 }
                             ],
-                            "padding": "Small"
+                            "padding": "Small",
+                            "verticalContentAlignment": "Center"
                         },
                         {
                             "type": "Column",
@@ -60,7 +63,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "url": "@variables('varTemplate')?['acImgLink",
+                                    "url": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true",
                                     "separator": true,
                                     "spacing": "Medium"
                                 }
@@ -78,117 +81,156 @@
         {
             "type": "Container",
             "padding": "Small",
-            "id": "acBodyText",
+            "id": "acContBody",
             "horizontalAlignment": "Center",
+            "verticalContentAlignment": "Center",
             "items": [
                 {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader1}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "horizontalAlignment": "Center"
-                },
-                {
                     "type": "Container",
-                    "id": "amContConnect",
-                    "padding": "None",
+                    "id": "acContBody1",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${$root.acText1}",
+                            "text": "Here's everything you need to know about the install",
+                            "size": "Large",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "As mentioned everything will be done remotely, so all we ask is that all Windows Updates have been done and has restarted if required.",
                             "size": "Medium",
-                            "isSubtle": true,
                             "horizontalAlignment": "Center",
                             "wrap": true,
-                            "spacing": "None",
-                            "id": "amTextConnectivity",
-                            "weight": "Lighter"
+                            "weight": "Default",
+                            "fontType": "Default"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Your device doesn't have to be left on over night for the installation to take place, so switch it off tonight and let the installation take place when you turn it on in the morning.",
+                            "size": "Medium",
+                            "weight": "Lighter",
+                            "horizontalAlignment": "Center",
+                            "wrap": true,
+                            "spacing": "Small",
+                            "color": "Default",
+                            "isSubtle": true
                         }
                     ],
-                    "isVisible": false
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader2}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "id": "amTextSecurity"
+                    "padding": "None"
                 },
                 {
                     "type": "Container",
-                    "id": "amContSecurity",
+                    "id": "acContBody2",
                     "padding": "None",
                     "items": [
                         {
-                            "type": "TextBlock",
-                            "text": "${$root.acText2}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "wrap": true,
-                            "horizontalAlignment": "Center",
-                            "spacing": "None",
-                            "weight": "Lighter"
+                            "type": "ColumnSet",
+                            "id": "acColBody1",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "id": "ImgScreenshot1",
+                                            "url": "https://github.com/DevHaydon/VPNRollout/blob/master/Screenshot1.jpg?raw=true"
+                                        }
+                                    ],
+                                    "padding": "None",
+                                    "width": 40
+                                },
+                                {
+                                    "type": "Column",
+                                    "padding": "None",
+                                    "width": 70,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Your device will silently download and install updates in the background, and you'll receive a notification to restart once it's done. It's that simple!",
+                                            "size": "Medium",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center",
+                                            "id": "amTextPerformance"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Things to note after:",
+                                            "size": "Medium",
+                                            "weight": "Bolder",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center",
+                                            "id": "859435d0-7289-3c5d-be2d-d6d3b5a572d2"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Wait for \"Connected\" to appear below the password input box when logging into your laptop. This ensures the login script runs, checks your ICE2 version, and verifies network locations' availability before entering your password.",
+                                            "size": "Medium",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center",
+                                            "id": "7c84a915-7511-518c-61ed-6c4f7c98774f"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "padding": "None"
                         }
-                    ],
-                    "isVisible": false
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader3}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "id": "amTextPerformance"
+                    ]
                 },
                 {
                     "type": "Container",
-                    "id": "amContPerform",
-                    "padding": "None",
+                    "id": "acContBody3",
                     "items": [
                         {
-                            "type": "TextBlock",
-                            "text": "${$root.acText3}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "horizontalAlignment": "Center",
-                            "wrap": true,
-                            "spacing": "None",
-                            "weight": "Lighter"
+                            "type": "ColumnSet",
+                            "id": "acColBody2",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "id": "e6e85b57-8661-a790-0ca5-74c60ad52059",
+                                    "padding": "None",
+                                    "width": 50,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "You might encounter a popup asking for your Microsoft details. Please log in using your email and password, and you may be prompted for your MFA code from the 'Authenticator App.' ",
+                                            "size": "Medium",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center",
+                                            "id": "5ffbbb05-3281-cfba-2817-f8ccb50cdae3"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Once successful, a webpage like the example shown will open automatically to confirm the VPN connection upon logging in.",
+                                            "size": "Medium",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center",
+                                            "id": "147414cb-ece4-af9e-9363-211fbfc3558a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "id": "imgScreenshot2",
+                                            "url": "https://github.com/DevHaydon/VPNRollout/blob/master/Screenshot2.png?raw=true",
+                                            "horizontalAlignment": "Right"
+                                        }
+                                    ],
+                                    "padding": "None",
+                                    "width": 40
+                                }
+                            ],
+                            "padding": "None"
                         }
                     ],
-                    "isVisible": false
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader4}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "horizontalAlignment": "Center",
-                    "id": "amTextRemote"
-                },
-                {
-                    "type": "Container",
-                    "id": "amContRemote",
-                    "padding": "None",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "${$root.acText4}",
-                            "size": "Medium",
-                            "isSubtle": true,
-                            "wrap": true,
-                            "horizontalAlignment": "Center",
-                            "id": "ac",
-                            "weight": "Lighter"
-                        }
-                    ],
-                    "isVisible": false
+                    "padding": "None"
                 }
             ],
-            "verticalContentAlignment": "Center"
+            "separator": true
         },
         {
             "type": "Container",
@@ -200,54 +242,45 @@
                     "id": "amToggle",
                     "actions": [
                         {
-                            "type": "Action.ToggleVisibility",
-                            "id": "amToggleButton",
-                            "title": "More Info",
-                            "targetElements": [
-                                "amContPerform",
-                                "amContRemote",
-                                "amContSecurity",
-                                "amContConnect"
-                            ],
-                            "style": "positive",
-                            "isPrimary": true
+                            "type": "Action.ShowCard",
+                            "title": "Contact Service Desk",
+                            "card": {
+                                "type": "AdaptiveCard",
+                                "padding": "None",
+                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                            }
+                        },
+                        {
+                            "type": "Action.OpenUrl",
+                            "id": "amBtnMoreInfo",
+                            "title": "More Information",
+                            "isPrimary": true,
+                            "url": "https://groundcontrol.atlassian.net/wiki/spaces/UKB/pages/605782101/Palo+Alto+VPN",
+                            "style": "positive"
                         }
                     ],
                     "horizontalAlignment": "Center",
                     "separator": true
+                },
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Input.Text",
+                            "placeholder": "Placeholder text",
+                            "id": "acComment",
+                            "isVisible": false,
+                            "inlineAction": {
+                                "type": "Action.Submit",
+                                "id": "acSubmit",
+                                "associatedInputs": "auto"
+                            },
+                            "isMultiline": true
+                        }
+                    ]
                 }
             ],
             "horizontalAlignment": "Center"
-        },
-        {
-            "type": "Container",
-            "id": "acContCTA",
-            "padding": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "id": "acTextCTA",
-                    "text": "${$root.acTextCTA}",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "isSubtle": true,
-                    "size": "Large",
-                    "weight": "Bolder",
-                    "color": "Good"
-                },
-                {
-                    "type": "TextBlock",
-                    "id": "acTextCTABody",
-                    "text": "${$root.acTextBodyCTA}",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "color": "Good",
-                    "size": "Medium",
-                    "isSubtle": true
-                }
-            ],
-            "style": "emphasis",
-            "separator": true
         },
         {
             "type": "Container",
@@ -269,5 +302,7 @@
             "separator": true
         }
     ],
-    "padding": "None"
+    "padding": "None",
+    "@type": "AdaptiveCard",
+    "@context": "http://schema.org/extensions"
 }

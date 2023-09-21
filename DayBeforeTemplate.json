@@ -1,0 +1,16 @@
+{
+
+    "acTitle": "Your VPN Installation is tomorrow",
+    "acSubtitle": "Just a quick reminder that tomorrow we plan on installing the new company VPN om your device.",
+    "acMain": "Key Benefits of Our New Palo Alto VPN:",
+    "acHeader1": "Seamless Connectivity: ",
+    "actext1": "Our new VPN ensures that you can securely access company resources, applications, and data with ease, no matter where you are. It provides a secure bridge between your device and our corporate network, eliminating any location-based barriers.",
+    "acHeader2": "Enhanced Security: ",
+    "actext2": "Protecting your data is our top priority. Our VPN employs state-of-the-art encryption and security protocols to safeguard your information and ensure your online activities remain private.",
+    "acHeader3": "Optimized Performance ",
+    "actext3": "Experience lightning-fast speeds and reliable connections, so you can work efficiently and effectively, without frustrating lags or interruptions.",
+    "acHeader4": "No Remote Desktop: ",
+    "actext4": "Access everything you need without the need for Remote Desktop, need ICe2? Or a Shared Drive? Just open it from your desktop... It's as easier as that!",
+    "acImgLink": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true"
+    
+    }
