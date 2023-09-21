@@ -33,7 +33,7 @@
                     "horizontalAlignment": "Center",
                     "separator": true,
                     "spacing": "Medium",
-                    "text": "${$root.acTitle}"
+                    "text": "@{variables('varTemplate')?['acTitle']}"
                 },
                 {
                     "type": "ColumnSet",
@@ -44,7 +44,7 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "${$root.acSubtitle}",
+                                    "text": "@{variables('varTemplate')?['acSubtitle']}",
                                     "wrap": true,
                                     "isSubtle": true,
                                     "spacing": "Large",
@@ -60,7 +60,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "url": "@variables('varTemplate')?['acImgLink",
+                                    "url": "@variables('varTemplate')?['acImgLink']",
                                     "separator": true,
                                     "spacing": "Medium"
                                 }
@@ -83,7 +83,14 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "${$root.acHeader1}",
+                    "text": "@{variables('varTemplate')?['acMain']}",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "@{variables('varTemplate')?['acHeader1']}",
                     "size": "Medium",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center"
@@ -95,7 +102,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${$root.acText1}",
+                            "text": "@{variables('varTemplate')?['acText1']}",
                             "size": "Medium",
                             "isSubtle": true,
                             "horizontalAlignment": "Center",
@@ -109,10 +116,9 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "${$root.acHeader2}",
+                    "text": "@{variables('varTemplate')?['acHeader2']}",
                     "size": "Medium",
                     "weight": "Bolder",
-                    "wrap": true,
                     "horizontalAlignment": "Center",
                     "id": "amTextSecurity"
                 },
@@ -123,7 +129,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${$root.acText2}",
+                            "text": "@{variables('varTemplate')?['acText2']}",
                             "size": "Medium",
                             "isSubtle": true,
                             "wrap": true,
@@ -136,7 +142,7 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "${$root.acHeader3}",
+                    "text": "@{variables('varTemplate')?['acHeader3']}",
                     "size": "Medium",
                     "weight": "Bolder",
                     "wrap": true,
@@ -150,7 +156,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${$root.acText3}",
+                            "text": "@{variables('varTemplate')?['acText3']}",
                             "size": "Medium",
                             "isSubtle": true,
                             "horizontalAlignment": "Center",
@@ -163,7 +169,7 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "${$root.acHeader4}",
+                    "text": "@{variables('varTemplate')?['acHeader4']}",
                     "size": "Medium",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center",
@@ -176,7 +182,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${$root.acText4}",
+                            "text": "@{variables('varTemplate')?['acText4']}",
                             "size": "Medium",
                             "isSubtle": true,
                             "wrap": true,
@@ -227,7 +233,7 @@
                 {
                     "type": "TextBlock",
                     "id": "acTextCTA",
-                    "text": "${$root.acTextCTA}",
+                    "text": "@{variables('varTemplate')?['acTextCTA']}",
                     "wrap": true,
                     "horizontalAlignment": "Center",
                     "isSubtle": true,
@@ -238,7 +244,7 @@
                 {
                     "type": "TextBlock",
                     "id": "acTextCTABody",
-                    "text": "${$root.acTextBodyCTA}",
+                    "text": "@{variables('varTemplate')?['acTextBodyCTA']}",
                     "wrap": true,
                     "horizontalAlignment": "Center",
                     "color": "Good",

@@ -1,7 +1,7 @@
 {
 
     "acTitle": "The New VPN is being Rolled Out",
-    "acSubtitle": "Hi @{triggeroutputs()?['Email']}, We are thrilled to announce a significant upgrade that will revolutionise the way we work in our ever-evolving hybrid environment. Say hello to our brand-new VPN (Virtual Private Network)!",
+    "acSubtitle": "Hi @triggerBody()?['Name'], We are thrilled to announce a significant upgrade that will revolutionise the way we work in our ever-evolving hybrid environment. Say hello to our brand-new VPN (Virtual Private Network)!",
     "acMain": "Key Benefits of Our New Palo Alto VPN:",
     "acHeader1": "Seamless Connectivity: ",
     "actext1": "Our new VPN ensures that you can securely access company resources, applications, and data with ease, no matter where you are. It provides a secure bridge between your device and our corporate network, eliminating any location-based barriers.",
