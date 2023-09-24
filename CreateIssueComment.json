@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Created by Automation at ###",
+            "marks": [
+              {
+                "type": "strong"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "taskList",
+        "attrs": {
+          "localId": "78b96a38-41ff-450b-b16a-922429348f67"
+        },
+        "content": [
+          {
+            "type": "taskItem",
+            "attrs": {
+              "localId": "93ab5e2e-a3dc-496b-a6f7-c5f3c7a9358d",
+              "state": "DONE"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Pre Comms has been sent"
+              }
+            ]
+          },
+          {
+            "type": "taskItem",
+            "attrs": {
+              "localId": "69840e51-5cfa-41cd-889f-63826cd8db87",
+              "state": "TODO"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Add Scheduled date."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": []
+      },
+      {
+        "type": "paragraph",
+        "content": []
+      }
+    ]
+  }

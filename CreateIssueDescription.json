@@ -1,0 +1,74 @@
+"description": {
+      "content": [
+        {
+          "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Scheduled installation for @{triggerBody()?['Name']}",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "info"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Remember To Start Process:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Add Installation Date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": []
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Link to Asset: "
+        },
+        {
+          "type": "text",
+          "text": "Link to SharePoint",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "http://Website.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+]
+    },
