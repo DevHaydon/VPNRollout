@@ -26,7 +26,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "size": "ExtraLarge",
+                    "size": "Large",
                     "weight": "Bolder",
                     "wrap": true,
                     "id": "acTxtTitle",
@@ -47,7 +47,7 @@
                                     "text": "@variables('varTemplate')?['acSubtitle']}",
                                     "wrap": true,
                                     "isSubtle": true,
-                                    "spacing": "Large",
+                                    "spacing": "Medium",
                                     "horizontalAlignment": "Center",
                                     "size": "Large"
                                 }
@@ -84,7 +84,7 @@
                 {
                     "type": "TextBlock",
                     "text": "@{variables('varTemplate')?['acMain']}",
-                    "size": "Large",
+                    "size": "Medium",
                     "weight": "Bolder",
                     "horizontalAlignment": "Center"
                 },

@@ -4,239 +4,248 @@
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "id": "acScheduledCommsTeams",
     "body": [
-        {
-            "type": "Container",
-            "items": [
-                {
-                    "type": "Image",
-                    "url": "https://github.com/DevHaydon/GC-Logos/blob/main/ITServiceDesk.png?raw=true",
-                    "altText": "Ground Control IT Logo",
-                    "horizontalAlignment": "Center"
-                }
-            ],
-            "minHeight": "0px",
-            "spacing": "Large",
-            "style": "emphasis",
-            "horizontalAlignment": "Center"        },
-        {
-            "type": "Container",
-            "id": "acContTitle",
-            "items": [
-                {
+      {
+        "type": "Container",
+        "items": [
+          {
+            "type": "Image",
+            "url": "https://github.com/DevHaydon/GC-Logos/blob/main/ITServiceDesk.png?raw=true",
+            "altText": "Ground Control IT Logo",
+            "horizontalAlignment": "Center"
+          }
+        ],
+        "minHeight": "0px",
+        "spacing": "Large",
+        "style": "emphasis"
+      },
+      {
+        "type": "Container",
+        "id": "acContTitle",
+        "items": [
+          {
+            "type": "TextBlock",
+            "size": "Large",
+            "weight": "Bolder",
+            "wrap": true,
+            "id": "acTxtTitle",
+            "horizontalAlignment": "Center",
+            "separator": true,
+            "spacing": "Medium",
+            "text": "@{variables('varTemplate')?['acTitle']}"
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": 60,
+                "items": [
+                  {
                     "type": "TextBlock",
-                    "size": "ExtraLarge",
-                    "weight": "Bolder",
+                    "text": "@{variables('varTemplate')?['acSubtitle']}",
                     "wrap": true,
-                    "id": "acTxtTitle",
+                    "isSubtle": true,
+                    "spacing": "Large",
                     "horizontalAlignment": "Center",
+                    "size": "Medium"
+                  }
+                ],
+                "spacing": "Small"
+              },
+              {
+                "type": "Column",
+                "width": 40,
+                "items": [
+                  {
+                    "type": "Image",
+                    "url": "@{variables('varTemplate')?['acImgLink']}",
                     "separator": true,
-                    "spacing": "Medium",
-                    "text": "${$root.acTitle}"
-                },
-                {
-                    "type": "ColumnSet",
-                    "columns": [
-                        {
-                            "type": "Column",
-                            "width": 60,
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "${$root.acSubtitle}",
-                                    "wrap": true,
-                                    "isSubtle": true,
-                                    "spacing": "Large",
-                                    "horizontalAlignment": "Center",
-                                    "size": "Large"
-                                }
-                            ],
-                            "spacing": "Small"
-                        },
-                        {
-                            "type": "Column",
-                            "width": 40,
-                            "items": [
-                                {
-                                    "type": "Image",
-                                    "url": "${$root.acImgLink}",
-                                    "separator": true,
-                                    "spacing": "Medium"
-                                }
-                            ],
-                            "spacing": "Small"
-                        }
-                    ],
-                    "style": "default",
-                    "spacing": "None"
-                }
+                    "spacing": "Medium"
+                  }
+                ],
+                "spacing": "Small"
+              }
             ],
             "style": "default",
             "spacing": "None"
-        },
-        {
-            "type": "Container",
-            "spacing": "Small",
-            "id": "acBodyText",
-            "horizontalAlignment": "Center",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acMain}",
-                    "size": "Large",
-                    "weight": "Bolder",
-                    "horizontalAlignment": "Center",
-                    "wrap": true
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader1}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "horizontalAlignment": "Center",
-                    "id": "amTextRemote",
-                    "wrap": true
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader2}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "horizontalAlignment": "Center",
-                    "id": "amTextSecurity"
-                }
-            ],
-            "verticalContentAlignment": "Center",
-            "separator": true
-        },
-        {
+          }
+        ],
+        "style": "default",
+        "spacing": "None"
+      },
+      {
+        "type": "Container",
+        "spacing": "Small",
+        "id": "acBodyText",
+        "items": [
+          {
             "type": "TextBlock",
-            "text": "${$root.acText2}",
+            "text": "@{variables('varTemplate')?['acMain']}",
             "size": "Medium",
+            "subtitle": true,
+            "weight": "Bolder",
+            "horizontalAlignment": "Center",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "@{variables('varTemplate')?['acHeader1']}",
+            "size": "Small",
+            "weight": "Bolder",
+            "horizontalAlignment": "Center",
+            "id": "amTextRemote",
+            "wrap": true
+          }
+        ],
+        "verticalContentAlignment": "Center",
+        "separator": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "@{variables('varTemplate')?['acText2']}",
+        "size": "Small",
+        "isSubtle": true,
+        "horizontalAlignment": "Center",
+        "wrap": true,
+        "spacing": "Small",
+        "weight": "Lighter"
+      },
+      {
+        "type": "Container",
+        "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
+        "spacing": "Medium",
+        "items": [
+          {
+            "type": "TextBlock",
+            "text": "@{variables('varTemplate')?['acHeader3']}",
+            "size": "Small",
+            "weight": "Bolder",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "id": "amTextPerformance"
+          },
+          {
+            "type": "TextBlock",
+            "text": "@{variables('varTemplate')?['acText3']}",
+            "size": "Small",
             "isSubtle": true,
             "horizontalAlignment": "Center",
             "wrap": true,
-            "spacing": "None",
             "weight": "Lighter"
-        },
-        {
-            "type": "Container",
-            "id": "1861bdd4-8e31-07f6-721c-3c639d55352e",
-            "spacing": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acHeader3}",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "id": "amTextPerformance"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acText3}",
-                    "size": "Medium",
-                    "isSubtle": true,
-                    "horizontalAlignment": "Center",
-                    "wrap": true,
-                    "weight": "Lighter"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acText4}",
-                    "size": "Medium",
-                    "isSubtle": true,
-                    "horizontalAlignment": "Center",
-                    "wrap": true,
-                    "weight": "Lighter"
-                }
-            ],
-            "separator": true
-        },
-        {
-            "type": "Container",
-            "id": "b18a6f02-4b1a-f0d3-580f-df0d28a044e2",
-            "spacing": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "${$root.acText5}",
-                    "size": "Medium",
-                    "isSubtle": true,
-                    "horizontalAlignment": "Center",
-                    "wrap": true,
-                    "spacing": "None",
-                    "id": "amTextConnectivity",
-                    "weight": "Lighter"
-                },
-                {
+          },
+          {
+            "type": "TextBlock",
+            "text": "@{variables('varTemplate')?['acText4']}",
+            "size": "Small",
+            "isSubtle": true,
+            "horizontalAlignment": "Center",
+            "wrap": true,
+            "weight": "Lighter"
+          },
+          {
+            "type": "TextBlock",
+            "text": "@{variables('varTemplate')?['acText5']}",
+            "size": "Small",
+            "isSubtle": true,
+            "horizontalAlignment": "Center",
+            "wrap": true,
+            "weight": "Lighter"
+          }
+        ],
+        "separator": true
+      },
+      {
+        "type": "Container",
+        "id": "b18a6f02-4b1a-f0d3-580f-df0d28a044e2",
+        "spacing": "Medium",
+        "items": [
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": 60,
+                "items": [
+                  {
                     "type": "ActionSet",
                     "actions": [
-                        {
-                            "type": "Action.OpenUrl",
-                            "title": "${$root.acUpdateText}",
-                            "url": "${$root.acUpdateLink}",
-                            "tooltip": "${$root.acUpdateText}"
-                        }
+                      {
+                        "type": "Action.OpenUrl",
+                        "title": "@{variables('varTemplate')?['acUpdateText']}",
+                        "url": "@{variables('varTemplate')?['acUpdateLink']}",
+                        "tooltip": "@{variables('varTemplate')?['acUpdateText']}"
+                      }
                     ],
                     "horizontalAlignment": "Center"
-                }
+                  }
+                ]
+              }
             ]
-        },
-        {
-            "type": "Container",
-            "id": "acContCTA",
-            "spacing": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "id": "acTextCTA",
-                    "text": "${$root.acTextCTA}",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "isSubtle": true,
-                    "size": "Medium",
-                    "weight": "Bolder"
-                },
-                {
+          }
+        ]
+      },
+      {
+        "type": "Container",
+        "id": "acContCTA",
+        "spacing": "Medium",
+        "items": [
+          {
+            "type": "TextBlock",
+            "id": "acTextCTA",
+            "text": "@{variables('varTemplate')?['acTextCTA']}",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "isSubtle": true,
+            "size": "Medium",
+            "weight": "Bolder"
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": 60,
+                "items": [
+                  {
                     "type": "ActionSet",
                     "id": "acCTAButton",
                     "actions": [
-                        {
-                            "type": "Action.OpenUrl",
-                            "id": "acCTA",
-                            "title": "Comment on Jira Ticket",
-                            "url": "${$root.acCTALink}",
-                            "style": "positive",
-                            "isPrimary": true,
-                            "iconUrl": "${$root.acJiraLogo}"
-                        }
+                      {
+                        "type": "Action.OpenUrl",
+                        "id": "acCTA",
+                        "title": "Comment on Jira Ticket",
+                        "url": "@{variables('varTemplate')?['acCTALink']}",
+                        "style": "positive"
+                      }
                     ],
                     "horizontalAlignment": "Center"
-                }
-            ],
-            "style": "emphasis",
-            "separator": true
-        },
-        {
-            "type": "Container",
-            "id": "acFooter",
-            "spacing": "None",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "id": "acTextFooter",
-                    "text": "IT Service Desk Notification",
-                    "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "isSubtle": true,
-                    "size": "Medium",
-                    "weight": "Bolder"
-                }
-            ],
-            "style": "emphasis",
-            "separator": true
-        }
-    ],
-    "spacing": "Default"
-}
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "style": "emphasis",
+        "separator": true
+      },
+      {
+        "type": "Container",
+        "id": "acFooter",
+        "spacing": "None",
+        "items": [
+          {
+            "type": "TextBlock",
+            "id": "acTextFooter",
+            "text": "IT Service Desk Notification",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "isSubtle": true,
+            "size": "Medium",
+            "weight": "Bolder"
+          }
+        ],
+        "style": "emphasis",
+        "separator": true
+      }
+    ]
+  }

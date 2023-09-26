@@ -1,8 +1,9 @@
 {
     "type": "AdaptiveCard",
-    "version": "1.4",
+    "version": "1.0",
+    "originator": "24b1d63e-e7ba-4fd9-aaa2-8068c6c11141",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "id": "acPreCommsTeams",
+    "id": "acDayBeforeOutlook",
     "body": [
         {
             "type": "Container",
@@ -18,12 +19,23 @@
             "minHeight": "0px",
             "style": "emphasis",
             "horizontalAlignment": "Center",
-            "spacing": "Large"
+            "padding": "Large"
         },
         {
             "type": "Container",
             "id": "acContTitle",
             "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "ExtraLarge",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "id": "acTxtTitle",
+                    "horizontalAlignment": "Center",
+                    "separator": true,
+                    "padding": "Medium",
+                    "text": "${$root.acTitle}"
+                },
                 {
                     "type": "ColumnSet",
                     "columns": [
@@ -33,41 +45,30 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "size": "ExtraLarge",
-                                    "weight": "Bolder",
-                                    "wrap": true,
-                                    "id": "acTxtTitle",
-                                    "horizontalAlignment": "Center",
-                                    "separator": true,
-                                    "spacing": "Medium",
-                                    "text": "Your VPN Installation is tomorrow"
-                                },
-                                {
-                                    "type": "TextBlock",
-                                    "text": "Just a quick reminder that we plan on installing the new company VPN tomorrow.",
+                                    "text": "${$root.acSubtitle",
                                     "wrap": true,
                                     "isSubtle": true,
-                                    "spacing": "Large",
+                                    "padding": "Large",
                                     "horizontalAlignment": "Center",
                                     "size": "Large",
                                     "weight": "Bolder"
                                 }
                             ],
-                            "spacing": "Small",
+                            "padding": "Small",
                             "verticalContentAlignment": "Center"
                         },
                         {
                             "type": "Column",
-                            "width": 30,
+                            "width": 40,
                             "items": [
                                 {
                                     "type": "Image",
                                     "url": "https://github.com/DevHaydon/GC-Logos/blob/main/PaloAlto.jpg?raw=true",
                                     "separator": true,
-                                    "spacing": "Medium"
+                                    "padding": "Medium"
                                 }
                             ],
-                            "spacing": "Small"
+                            "padding": "Small"
                         }
                     ],
                     "style": "default"
@@ -77,7 +78,7 @@
         },
         {
             "type": "Container",
-            "spacing": "Small",
+            "padding": "Small",
             "id": "acContBody",
             "horizontalAlignment": "Center",
             "verticalContentAlignment": "Center",
@@ -110,7 +111,7 @@
                             "weight": "Lighter",
                             "horizontalAlignment": "Center",
                             "wrap": true,
-                            "spacing": "Small",
+                            "padding": "Small",
                             "color": "Default",
                             "isSubtle": true
                         }
@@ -225,37 +226,26 @@
             "id": "amConToggle",
             "items": [
                 {
-                    "type": "ColumnSet",
-                    "columns": [
+                    "type": "ActionSet",
+                    "id": "amToggle",
+                    "actions": [
                         {
-                            "type": "Column",
-                            "width": "stretch",
-                            "items": [
-                                {
-                                    "type": "ActionSet",
-                                    "id": "amToggle",
-                                    "actions": [
-                                        {
-                                            "type": "Action.OpenUrl",
-                                            "title": "Comment on Jira Ticket",
-                                            "url": "ITSM"
-                                        },
-                                        {
-                                            "type": "Action.OpenUrl",
-                                            "id": "amBtnMoreInfo",
-                                            "title": "More Information",
-                                            "url": "https://groundcontrol.atlassian.net/wiki/spaces/UKB/pages/605782101/Palo+Alto+VPN",
-                                            "style": "positive"
-                                        }
-                                    ],
-                                    "separator": true,
-                                    "horizontalAlignment": "Center"
-                                }
-                            ],
-                            "horizontalAlignment": "Center"
+                            "type": "Action.ShowCard",
+                            "title": "Contact Service Desk",
+                            "card": {
+                                "type": "AdaptiveCard",
+                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                            }
+                        },
+                        {
+                            "type": "Action.OpenUrl",
+                            "id": "amBtnMoreInfo",
+                            "title": "More Information",
+                            "url": "https://groundcontrol.atlassian.net/wiki/spaces/UKB/pages/605782101/Palo+Alto+VPN",
+                            "style": "positive"
                         }
                     ],
-                    "horizontalAlignment": "Center"
+                    "separator": true
                 },
                 {
                     "type": "Container",
@@ -272,11 +262,9 @@
                             },
                             "isMultiline": true
                         }
-                    ],
-                    "isVisible": false
+                    ]
                 }
-            ],
-            "horizontalAlignment": "Center"
+            ]
         },
         {
             "type": "Container",
