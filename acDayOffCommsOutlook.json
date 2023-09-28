@@ -1,6 +1,7 @@
 {
     "type": "AdaptiveCard",
-    "version": "1.4",
+    "version": "1.0",
+    "originator": "24b1d63e-e7ba-4fd9-aaa2-8068c6c11141",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "body": [
         {
@@ -10,12 +11,13 @@
                     "type": "Image",
                     "url": "https://github.com/DevHaydon/GC-Logos/blob/main/ITServiceDesk.png?raw=true",
                     "altText": "Ground Control IT Logo",
-                    "horizontalAlignment": "Center"
+                    "horizontalAlignment": "Center",
+                    "padding": "Large"
                 }
             ],
             "minHeight": "0px",
             "style": "emphasis",
-            "spacing": "Large"
+            "padding": "Large"
         },
         {
             "type": "Container",
@@ -36,9 +38,11 @@
                     "type": "Container",
                     "id": "amContConnect",
                     "spacing": "None",
-                    "isVisible": false
+                    "isVisible": false,
+                    "padding": "None"
                 }
-            ]
+            ],
+            "padding": "None"
         },
         {
             "type": "Container",
@@ -77,7 +81,8 @@
                     "id": "amTextPerformance"
                 }
             ],
-            "verticalContentAlignment": "Center"
+            "verticalContentAlignment": "Center",
+            "padding": "None"
         },
         {
             "type": "Container",
@@ -113,7 +118,8 @@
                                 {
                                     "type": "Column",
                                     "width": "stretch",
-                                    "horizontalAlignment": "Center"
+                                    "horizontalAlignment": "Center",
+                                    "padding": "None"
                                 },
                                 {
                                     "type": "Column",
@@ -126,22 +132,26 @@
                                                 {
                                                     "type": "Action.OpenUrl",
                                                     "id": "amMoreinfo",
-                                                    "url": "https://ground-control.co.uk",
+                                                    "url": "@{outputs('Compose')}",
                                                     "title": "Contact Us",
-                                                    "style": "positive"
+                                                    "style": "positive",
+                                                    "isPrimary": true
                                                 }
                                             ],
                                             "separator": true,
                                             "horizontalAlignment": "Center"
                                         }
-                                    ]
+                                    ],
+                                    "padding": "None"
                                 },
                                 {
                                     "type": "Column",
-                                    "width": "stretch"
+                                    "width": "stretch",
+                                    "padding": "None"
                                 }
                             ],
-                            "horizontalAlignment": "Center"
+                            "horizontalAlignment": "Center",
+                            "padding": "None"
                         },
                         {
                             "type": "TextBlock",
@@ -155,11 +165,14 @@
                         }
                     ],
                     "style": "emphasis",
-                    "separator": true
+                    "separator": true,
+                    "padding": "None"
                 }
             ],
             "style": "emphasis",
-            "separator": true
+            "separator": true,
+            "padding": "None"
         }
-    ]
+    ],
+    "padding": "None"
 }
